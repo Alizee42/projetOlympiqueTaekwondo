@@ -1,0 +1,766 @@
+:root {
+    --primary-color: #e16f8a; /* Rose */
+    --secondary-color: #1d84ac; /* Bleu */
+    --text-color: #34495e;
+    --background-color: #ffffff;
+    --hover-color: #f15f8b; /* Couleur de survol pour les boutons */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+    padding: 6px;
+  }
+
+nav ul li a,
+nav ul li button {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    color: var(--primary-color);
+}
+
+nav ul li i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+nav ul li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+#logout-button {
+    background: #e16f8a;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    outline: inherit;
+    border-radius: 14px;
+  }
+
+#logout-button i {
+    margin-right: 8px;
+}
+
+.dashboard-section {
+    padding: 20px;
+}
+
+.dashboard-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.stat-card p {
+    font-size: 24px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.stat-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.management-section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.management-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.btn-add {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: var(--hover-color);
+}
+/* Style pour les cellules de contenu */
+td.content-cell {
+    background-color: #ffffff; 
+    font-weight: bold; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    color: #34495e; 
+}
+
+/* Style pour les cellules de contenu supplémentaire */
+td.extra-content-cell {
+    background-color: #ffe6f0; 
+    font-style: italic; 
+    padding: 10px; 
+    border: 1px solid #e16f8a; 
+    color: #e16f8a; 
+}
+
+/* Ajout d'une légère ombre au survol pour les cellules */
+td.content-cell:hover, 
+td.extra-content-cell:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); 
+}
+
+
+/* Style pour le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: var(--secondary-color); 
+    color: #fff; 
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr.featured {
+    background-color: #e1dada;
+    font-weight: bold;
+}
+
+tr.featured td.content-cell,
+tr.featured td.extra-content-cell {
+    background-color: inherit; /* Hérite du fond de la ligne */
+    color: inherit; /* Hérite de la couleur du texte */
+}
+button.set-featured-button {
+    background-color: #f39c12; /* Orange pour définir comme à la une */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 70%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+button.set-featured-button:hover {
+    background-color: #e67e22; /* Orange foncé pour le survol */
+}
+
+
+/* Ajout d'une légère ombre au survol pour les cellules */
+table td.content-cell:hover, 
+table td.extra-content-cell:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); 
+}
+
+table td:nth-child(3) {
+    width: 30%; /* Ajustez ce pourcentage en fonction de vos besoins */
+}
+
+/* Styles pour les boutons du tableau */
+table button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 5px;
+    transition: opacity 0.3s ease;
+}
+/* Bouton Modifier avec une couleur spécifique */
+button.edit-button {
+    background-color: #3498db; /* Bleu pour Modifier */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 70%;
+    text-align: center;
+    margin: 2px 7px 7px 0;
+}
+
+button.edit-button:hover {
+    background-color: #2980b9;
+}
+
+/* Bouton Supprimer avec une couleur spécifique */
+button.delete-button {
+    background-color: #e74c3c; /* Rouge pour Supprimer */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 70%;
+    text-align: center;
+}
+
+button.delete-button:hover {
+    background-color: #c0392b;
+}
+#gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+#gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Styles pour le formulaire d'ajout */
+#add-teacher-form {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#add-teacher-form .form-group {
+    margin-bottom: 15px;
+}
+
+#add-teacher-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+#add-teacher-form input[type="text"],
+#add-teacher-form textarea,
+#add-teacher-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+#add-teacher-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#add-teacher-form button:hover {
+    background-color: var(--hover-color);
+}
+textarea#teacher-bio {
+    width: 100%;
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement */
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #34495e;
+}
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.news-content, .news-extra-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.back-button:hover {
+    background-color: var(--hover-color);
+}
+.centered-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.centered-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+#add-news-form {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#add-news-form .form-group {
+    margin-bottom: 15px;
+}
+
+#add-news-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+#add-news-form input[type="text"],
+#add-news-form textarea,
+#add-news-form input[type="file"],
+#add-news-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+#add-news-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#add-news-form button:hover {
+    background-color: var(--hover-color);
+}
+
+textarea#news-content,
+textarea#news-extra-content {
+    width: 100%;
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement */
+}
+/* Styles pour la modale */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.modal-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles pour la section de gestion des inscriptions */
+.management-section {
+    margin: 20px 0;
+}
+
+.management-section h2 {
+    margin-bottom: 10px;
+}
+
+#search-bar {
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.approve-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.reject-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/* Conteneur pour regrouper les boutons */
+.button-group {
+    display: flex;
+    flex-direction: column; /* Aligne les boutons verticalement */
+    align-items: flex-start; /* Aligne les boutons à gauche */
+}
+
+/* Réduction de la largeur de la colonne "Nom et Prénom" */
+td.name-cell {
+    width: 20%;
+}
+
+/* Réduction de la largeur de la colonne "Email" */
+td.email-cell {
+    width: 25%;
+}
+
+/* Réduction de la largeur de la colonne "Cours" */
+td.course-cell {
+    width: 15%; /* Ajustez ce pourcentage pour réduire la largeur */
+}
+
+/* Réduction de la largeur de la colonne "Statut" */
+td.status-cell {
+    width: 15%;
+}
+
+/* Largeur de la colonne "Actions" */
+td.actions-cell {
+    width: 25%;
+    text-align: left;
+}
+
+/* Conteneur pour regrouper les boutons dans la colonne Actions */
+.button-group {
+    display: flex;
+    flex-direction: column; /* Les boutons seront empilés verticalement */
+    justify-content: center; /* Centrer verticalement */
+    align-items: flex-start; /* Aligner les boutons à gauche */
+    gap: 4px; /* Espacement vertical entre les boutons */
+}
+
+/* Styles pour les boutons du tableau */
+.table-button {
+    padding: 5px 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Les boutons prennent toute la largeur disponible */
+    box-sizing: border-box; /* Prend en compte le padding dans la largeur */
+}
+button.approve-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 70%;
+    text-align: center;
+    margin: 2px 7px 7px 0;
+  }
+  button.reject-button {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 70%;
+    text-align: center;
+    margin: 2px 7px 7px 0;
+  }
+  .approve-button:hover {
+    background-color: #45a049; /* Vert foncé pour le survol */
+}
+
+.reject-button:hover {
+    background-color: #e67e22; /* Orange foncé pour le survol */
+}
+/* Styles pour la galerie dans la section administration */
+#gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item .delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gallery-item .delete-button:hover {
+    background-color: #c0392b;
+}
+
+#add-image-form .form-group {
+    margin-bottom: 15px;
+}
+
+#add-image-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+#add-image-form input[type="file"],
+#add-image-form input[type="text"],
+#add-image-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+#add-image-form button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#add-image-form button:hover {
+    background-color: var(--hover-color);
+}
+.hidden {
+    display: none;
+}

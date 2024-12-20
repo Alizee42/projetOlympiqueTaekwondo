@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscriptions - Olympique Taekwondo Villeurbannais</title>
+    <link rel="stylesheet" href="./css/inscriptions-tarifs.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/inscription.js" defer></script>
+    <script src="./js/inscriptionTarif.js" defer></script>    
+    <script type="module" src="./js/script.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Olympique Taekwondo Villeurbannais</h1>
+            <div id="hamburger" class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html">Accueil</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropbtn">Le Club</a>
+                        <ul class="dropdown-content">
+                            <li><a href="./index.html#about">À propos</a></li>
+                            <li><a href="./index.html#enseignants">Enseignants</a></li>
+                            <li><a href="./index.html#testimonials">Témoignages</a></li>
+                            <li><a href="./index.html#news">Actualités</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropbtn">Infos Pratiques</a>
+                        <ul class="dropdown-content">
+                            <li><a href="inscription.html">Inscriptions</a></li>
+                            <li><a href="tarifs.html">Tarifs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="galerie.html">Galerie</a></li>
+                    <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                    <li class="nav-item"><a href="connexion.html">Connexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Vidéo de Présentation -->
+    <section id="presentation-video" class="video-section">
+        <div class="container">
+            <h2>Découvrez Notre Club</h2>
+            <div class="video-wrapper">
+                <video controls width="100%" height="auto">
+                    <source src="./images/Bourg_6.MP4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+            </div>
+        </div>
+    </section>
+<!-- Ajoutez cette section après la section modalités -->
+<!-- Schedule Information Section -->
+<section id="schedule-info" class="schedule-info-section">
+    <div class="container">
+        <h2>Horaires des Cours</h2>
+        <div class="schedule-info-container">
+            <div class="schedule-card">
+                <i class="fas fa-clock"></i>
+                <h3>Le mardi</h3>
+                <div class="schedule-details">
+                    <h4>Heures</h4>
+                    <p>18h à 19h : BABYS et enfants</p>
+                    <p>19h à 20h : Adolescents et adultes</p>
+                </div>
+                <div class="schedule-details">
+                    <h4>Adresse</h4>
+                    <p>16 Rue du Progrès, 69100 Villeurbanne</p>
+                </div>
+            </div>
+            <div class="schedule-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Le mercredi</h3>
+                <div class="schedule-details">
+                    <h4>Heures</h4>
+                    <p>18h à 19h : BABYS et enfants</p>
+                    <p>19h à 20h : Adolescents et adultes</p>
+                </div>
+                <div class="schedule-details">
+                    <h4>Adresse</h4>
+                    <p>6 Rue Berthelot, 69100 Villeurbanne</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Modalités d'Inscription Section -->
+    <section id="modalites" class="modalites-section">
+        <div class="container">
+            <h2>Modalités d'Inscription</h2>
+            <div class="modalites-grid">
+                <div class="modalite-card">
+                    <i class="fas fa-id-card"></i>
+                    <h3>Document d'Identité</h3>
+                    <p>Assurez-vous de fournir une copie valide de votre carte d'identité ou passeport.</p>
+                </div>
+                <div class="modalite-card">
+                    <i class="fas fa-file-medical"></i>
+                    <h3>Certificat Médical</h3>
+                    <p>Un certificat médical récent attestant votre aptitude à pratiquer le Taekwondo est requis.</p>
+                </div>
+                <div class="modalite-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Photo d'Identité</h3>
+                    <p>Joignez une photo d'identité récente pour compléter votre dossier d'inscription.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inscription Section -->
+    <section id="inscription" class="inscription-section">
+        <div class="container">
+            <h2>Rejoignez l'Olympique Taekwondo Villeurbannais</h2>
+            <p>Remplissez le formulaire ci-dessous pour vous inscrire à notre club. Nous sommes ravis de vous accueillir!</p>
+    
+            <form id="inscription-form">
+                <!-- Nom et Prénom -->
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nom" name="nom" required placeholder=" " />
+                    <label for="nom">Nom:</label>
+                </div>
+                
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="prenom" name="prenom" required placeholder=" " />
+                    <label for="prenom">Prénom:</label>
+                </div>
+    
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" required placeholder=" " />
+                    <label for="email">Email:</label>
+                </div>
+    
+                <div class="form-group">
+                    <i class="fas fa-list"></i>
+                    <select id="cours" name="cours" required>
+                        <option value="" disabled selected hidden></option>
+                        <option value="debutants">Débutants</option>
+                        <option value="intermediaires">Intermédiaires</option>
+                        <option value="avances">Avancés</option>
+                    </select>
+                    <label for="cours">Choisissez un cours:</label>
+                </div>
+                <!-- Document d'Identité -->
+                <div class="form-group document-upload">
+                    <h3><i class="fas fa-id-card document-icon"></i> Document d'Identité</h3>
+                    <div class="file-drop-zone" id="drop-zone-identite">
+                        <p>Glissez-déposez votre fichier ici ou cliquez pour sélectionner</p>
+                        <input type="file" id="document-identite" name="document-identite" accept="image/*,.pdf" required>
+                    </div>
+                    <div id="preview-identite" class="file-preview"></div>
+                </div>
+                
+                <div class="form-group document-upload">
+                    <h3><i class="fas fa-file-medical document-icon"></i> Certificat Médical</h3>
+                    <div class="file-drop-zone" id="drop-zone-medical">
+                        <p>Glissez-déposez votre fichier ici ou cliquez pour sélectionner</p>
+                        <input type="file" id="document-medical" name="document-medical" accept="image/*,.pdf" required>
+                    </div>
+                    <div id="preview-medical" class="file-preview"></div>
+                </div>
+                
+                <div class="form-group document-upload">
+                    <h3><i class="fas fa-camera document-icon"></i> Photo d'Identité</h3>
+                    <div class="file-drop-zone" id="drop-zone-photo">
+                        <p>Glissez-déposez votre fichier ici ou cliquez pour sélectionner</p>
+                        <input type="file" id="document-photo" name="document-photo" accept="image/*,.pdf" required>
+                    </div>
+                    <div id="preview-photo" class="file-preview"></div>
+                </div>
+                <button type="submit" class="btn-primary">Soumettre les Documents</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>À propos de nous</h3>
+                <p>L'Olympique Taekwondo Villeurbannais est dédié à l'excellence en Taekwondo. Rejoignez-nous pour découvrir cet art martial et développer vos compétences.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="inscription.html">Inscriptions</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 4 Rue De Bat Yam, 69100 Villeurbanne</p>
+                <p><i class="fas fa-phone-alt"></i> 06.63.97.89.26 / 07.65.82.67.72</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:taekwondovilleurbannais@gmail.com ">taekwondovilleurbannais@gmail.com </a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <a href="https://www.facebook.com/groups/127724277248941/"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Olympique Taekwondo Villeurbannais. Tous droits réservés.</p>
+            <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+        <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+    </footer>
+
+</body>
+</html>

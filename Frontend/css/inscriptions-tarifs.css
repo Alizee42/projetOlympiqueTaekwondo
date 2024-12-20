@@ -1,0 +1,1117 @@
+:root {
+    --rose-color: #e16f8a; /* Une teinte de rose */
+}
+
+
+/* Video Section */
+.video-section {
+    padding: 60px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.video-section h2 {
+    color: var(--secondary-color);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-left: 23%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modalités Section */
+.modalites-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.modalites-section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.galerie-section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.modalites-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.modalite-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.modalite-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modalite-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.modalite-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.modalite-card p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Pourquoi Nous Rejoindre Section */
+.rejoindre-section {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.rejoindre-section h2 {
+    color: var(--secondary-color);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.rejoindre-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.rejoindre-item {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rejoindre-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.rejoindre-item i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.rejoindre-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.rejoindre-item p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Styles pour les champs du formulaire */
+.inscription-section {
+    background-color: #fff;
+    padding: 66px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 3% 33%;
+    width: 27%;
+}
+
+.inscription-section h2 {
+    text-align: center;
+    margin: 10px 13px 30px 39px;
+    color: #1d84ac;
+}
+
+/* Form Group */
+.form-group {
+    position: relative;
+    margin-bottom: 25px !important;
+  }
+/* Icônes des champs */
+.form-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Ajustez cette valeur pour contrôler la position de l'icône */
+    transform: translateY(-50%);
+    color: #999999;
+    font-size: 18px;
+}
+
+/* Champs de texte et de sélection */
+.form-group input,
+.form-group select {
+    width: 100% !important;
+    padding: 12px 12px 12px 40px !important; /* Ajustez cette valeur pour donner plus d'espace entre l'icône et le texte */
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    font-size: 16px !important ;
+    color: #34495e !important;
+    transition: border-color 0.3s ease !important;
+    background-color: #fff !important;
+}
+.form-group.contact {
+    width: 56%;
+  }
+/* Label flottant */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 600;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    color: #666666;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+.form-group input:focus + label,
+.form-group select:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:not(:placeholder-shown) + label {
+    top: -20px; /* Position au-dessus du champ */
+    left: 10px; /* Ajusté pour correspondre au padding du champ */
+    color: #1d84ac;
+    font-size: 14px;
+    background-color: #fff;
+    padding: 0 5px;
+}
+/* Styles pour les labels flottants des champs de téléchargement */
+.form-group input[type="file"]:focus + label,
+.form-group input[type="file"]:valid + label {
+    top: -10px;
+    left: 15px;
+    color: #1d84ac;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* Ajustement pour les champs de type file */
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #34495e;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+.form-group input[type="file"]:focus,
+.form-group input[type="file"]:valid {
+    border-color: #1d84ac;
+    outline: none;
+}
+.form-group input[type="file"] {
+    padding: 15px 10px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #1d84ac;
+    outline: none;
+}
+
+
+#cours {
+    width: 112% !important;
+  }
+/* Document Upload Section */
+.document-upload {
+    margin-bottom: 40px;  /* Espacement entre les sections */
+}
+
+/* Styles pour les titres des sections de documents avec icônes */
+.document-upload h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1d84ac;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.document-upload h3 i {
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    font-size: 24px; /* Taille de l'icône */
+    color: #1d84ac; /* Couleur de l'icône */
+}
+/* Style spécifique pour les icônes des documents */
+.document-upload h3 .document-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #1d84ac;
+    vertical-align: middle;
+    margin-top: -67px;
+    margin-left: -41px;
+}
+
+
+/* Zone de glisser-déposer */
+.file-drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 30px;  /* Augmenté pour plus d'espace */
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    background-color: #f9f9f9;  /* Couleur de fond pour mieux délimiter */
+    width: 97%;
+}
+
+.file-drop-zone:hover,
+.file-drop-zone.dragover {
+    border-color: #1d84ac;
+    background-color: #eef6fb;  /* Légère coloration au survol */
+}
+
+.file-drop-zone p {
+    margin: 0;
+    color: #999;
+    font-size: 16px;
+}
+
+.file-drop-zone input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-file-text {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #999;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Prévisualisation des fichiers */
+.file-preview {
+    margin-top: 10px;
+    text-align: left;  /* Aligner à gauche pour les prévisualisations */
+}
+
+.file-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin-top: 10px;
+}
+
+.file-preview .file-name {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Bouton de soumission */
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #1d84ac;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #155c7f;
+    transform: translateY(-2px);
+}
+.contact-title-rose {
+    color: #e16f8a; /* Rose */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tarifs Section */
+/* Tarifs Section */
+.tarifs-section {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarifs-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1d84ac;
+}
+
+/* Onglets */
+.tabs {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tab-link {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-link:hover, .tab-link.active {
+    background-color: var(--rose-color);
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Contenu des Onglets */
+.tab-content {
+    display: none;
+}
+
+.tab-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.tab-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.tab-content table, .tab-content th, .tab-content td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 15px;
+}
+
+.tab-content th {
+    background-color: #1d84ac;
+    color: #fff;
+}
+
+.tab-content td {
+    background-color: #f9f9f9;
+}
+/* Stylisation du tableau de tarifs */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pricing-table thead {
+    background-color: var(--rose-color);
+    color: #fff;
+    text-align: center;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+}
+
+.pricing-table th {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.pricing-table tbody tr:hover {
+    background-color: #f8bbd0; 
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pricing-table tbody td {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.pricing-table tbody td:last-child {
+    font-weight: bold;
+    color: var(--rose-color);
+}
+
+.pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+.containerTarif{
+width: 100%;
+  margin: auto;
+  max-width: 1200px;
+}
+/* Options de Paiement */
+.payment-options {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.payment-options h3 {
+    color: #1d84ac;
+    margin-bottom: 20px;
+}
+
+.payment-btn {
+    background-color: var(--rose-color);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.payment-btn i {
+    margin-right: 10px;
+}
+
+.payment-btn:hover {
+    background-color: #155c7f;
+}
+
+/* Section FAQ */
+.faq-section {
+    padding: 40px 0;
+    background-color: #f7f7f7;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1d84ac;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    color: var(--rose-color);
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1d84ac;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #155c7f;
+}
+
+.back-to-top i {
+    font-size: 20px;
+}
+
+/* Afficher le bouton quand on scroll */
+body {
+    position: relative;
+}
+
+body.scrolled .back-to-top {
+    display: block;
+}
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+    background: #ffffff;
+}
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-container,
+.form-container {
+    flex: 1;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    max-width: 400px;
+}
+
+.text-container h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.text-container p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.text-container ul {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.text-container ul li {
+    margin-bottom: 10px;
+}
+
+.text-container ul li strong {
+        color: #e16f8a; /* Rose */    
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 39px 0px 8px;
+}
+
+.form-row {
+    display: flex;
+    gap: 53px;
+    margin-bottom: 20px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #1d84ac;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group select {
+    width: 100% ;
+    padding: 12px 12px 12px 40px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+    color: #34495e !important;
+    transition: border-color 0.3s ease !important;
+    background-color: #fff !important;
+}
+
+.contact-section .selContact {
+    width: 132% !important;
+}
+.contact-section .form-group textarea {
+    width: 100% !important;
+    padding: 12px 12px 12px 40px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+    color: #34495e !important;
+    transition: border-color 0.3s ease !important;
+    background-color: #fff !important;
+    resize: none; /* Empêche le redimensionnement manuel du textarea */
+}
+
+.btn-submit:hover {
+    background-color: #e16f8a;
+    transform: translateY(-2px);
+}
+
+.contact-title-rose {
+    color: #e16f8a !important;
+    text-align: center;
+}
+.titreConnexion{
+    color: #e16f8a !important;
+    text-align: center;
+}
+/* Connexion Section */
+.admin-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 20px;
+    margin-top: -12%;
+}
+
+.intro-message {
+    font-weight: bold;
+}
+
+.info-message {
+    margin-top: 10px;
+}
+
+.connexion-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+}
+
+.form-container ul.contact-details {
+    list-style: none; /* Supprime les puces */
+    padding-left: 0; /* Enlève le retrait */
+}
+
+.form-container ul.contact-details li {
+    margin-bottom: 10px;
+    color: #1d84ac; /* Bleu pour tout le texte */
+}
+
+.form-container ul.contact-details li strong {
+    color: #1d84ac; /* Assure que le texte en gras est aussi en bleu */
+}
+
+.form-container {
+    flex: 1;
+    width: 600px;
+    margin-left: 2%;
+  }
+
+.connexion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.connexion-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.connexion-label {
+    width: 35%;
+    text-align: left; /* Alignement à gauche des labels */
+    font-weight: 600;
+    color: #555;
+}
+
+.connexion-input {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #555;
+    background-color: #f4f4f4;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.connexion-input:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: #1d84ac;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color:#e16f8a;
+    transform: translateY(-2px);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #1d84ac;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #e16f8a;
+}
+
+/* Style de la section d'inscription */
+.signup-link.inscription {
+    margin-top: -15px;
+    margin-left: 11px;
+  }
+  .signup-link {
+    margin-top: -9%;
+    font-size: 14px;
+  }
+
+.signup-link a {
+    color: #1d84ac;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: block; /* Place le lien sur une nouvelle ligne */
+    margin-top: 5px; /* Espace entre le texte et le lien */
+}
+
+.signup-link a:hover {
+    color: #e16f8a;
+}
+
+.schedule-info-section {
+    padding: 60px 0;
+    background-color: #f5f5f5; /* Fond neutre pour un contraste doux */
+}
+
+.schedule-info-section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 36px; /* Taille du titre */
+    margin-bottom: 40px; /* Espacement sous le titre */
+    position: relative;
+}
+
+.schedule-info-section h2::after {
+    content: '';
+    width: 80px; /* Largeur de la ligne */
+    height: 4px; /* Épaisseur de la ligne */
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -15px; /* Positionnement sous le titre */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.schedule-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrage des cartes */
+    gap: 20px; /* Espacement entre les cartes */
+    max-width: 800px; /* Largeur maximale des cartes */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+.schedule-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px; /* Largeur fixe des cartes */
+    text-align: center; /* Alignement du texte au centre */
+    transition: transform 0.3s, box-shadow 0.3s; /* Effet de survol */
+}
+
+.schedule-card:hover {
+    transform: translateY(-5px); /* Élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.schedule-card i {
+    font-size: 24px; /* Taille des icônes */
+    color: var(--secondary-color);
+    margin-bottom: 15px; /* Espacement sous les icônes */
+}
+
+.schedule-card h3 {
+    font-size: 20px;
+    margin: 10px 0; /* Espacement autour du titre */
+    color: var(--text-color);
+}
+
+.schedule-card .schedule-details {
+    margin-bottom: 20px; /* Espacement entre les sections d'information */
+}
+
+.schedule-card .schedule-details h4 {
+    font-size: 18px;
+    color: var(--primary-color); /* Couleur pour les sous-titres */
+    margin-bottom: 5px; /* Espacement sous les sous-titres */
+}
+
+.schedule-card .schedule-details p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 5px 0; /* Espacement vertical entre les paragraphes */
+}
+
+.schedule-card .schedule-details .time {
+    font-weight: bold; /* Mise en gras des heures */
+}
+
+.form-container.connexion {
+    margin-left: 30%;
+    margin-top: 4%;
+  }
+
+
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 20px;
+    }
+    
+    .navbar .nav-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inscription-section {
+        margin: 10px;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group input[type="file"] {
+        padding: 12px 10px 12px 40px;
+        font-size: 16px;
+    }
+
+    .form-group label {
+        left: 35px;  /* Ajuster pour que le label soit bien positionné */
+    }
+
+    .form-group i {
+        left: 10px;  /* Ajuster l'icône à gauche pour les petits écrans */
+    }
+
+    .document-upload h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .file-drop-zone {
+        padding: 20px;
+    }
+
+    .custom-file-text {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modalites-grid, .rejoindre-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .rejoindre-item, .modalite-card {
+        min-width: 87%;
+        margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+        padding-bottom: 56.25%;
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: auto;
+    }
+    .form-group input, .form-group select, .form-group input[type="file"] {
+        width: 97%;
+        margin-bottom: 7px;
+      }
+      .document-upload h3 .document-icon {
+        margin-top: -72px;
+      }
+      .contact-container {
+        flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+    .form-container {
+        width: 80%;
+        max-width: none;
+    }
+
+    .connexion-label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .connexion-input {
+        width: 100%;
+    }
+
+    .signup-link {
+        margin-top: -47px;
+        font-size: 12px;
+    }
+    .forgot-password a {
+        font-size: 12px;
+      }
+    }

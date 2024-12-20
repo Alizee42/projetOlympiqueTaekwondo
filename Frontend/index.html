@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympique Taekwondo Villeurbannais</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Olympique Taekwondo Villeurbannais</h1>
+            <div id="hamburger" class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html">Accueil</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropbtn">Le Club</a>
+                        <ul class="dropdown-content">
+                            <li><a href="./index.html#about">À propos</a></li>
+                            <li><a href="./index.html#enseignants">Enseignants</a></li>
+                            <li><a href="./index.html#testimonials">Témoignages</a></li>
+                            <li><a href="./index.html#news">Actualités</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropbtn">Infos Pratiques</a>
+                        <ul class="dropdown-content">
+                            <li><a href="inscription.html">Inscriptions</a></li>
+                            <li><a href="tarifs.html">Tarifs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="galerie.html">Galerie</a></li>
+                    <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                    <li class="nav-item"><a href="connexion.html">Connexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <video autoplay muted loop id="hero-video">
+            <source src="images/IMG_1919.MOV" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="overlay">
+            <h1>Bienvenue à l'Olympique Taekwondo Villeurbannais</h1>
+            <p>Découvrez la passion du Taekwondo avec des enseignants qualifiés.</p>
+            <a href="inscription.html" class="cta-button">Inscrivez-vous maintenant</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>À propos de nous</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Qui sommes-nous ?</h3>
+                    <p>L'Olympique Taekwondo Villeurbannais, fondé en 1995, est dédié à l'excellence en Taekwondo. Nous accueillons des pratiquants de tous niveaux dans un environnement de respect et de discipline.</p>
+                    <p>Notre mission est de former des athlètes non seulement sur le plan physique, mais aussi sur le plan mental, en mettant l'accent sur le développement personnel et la maîtrise de soi.</p>
+                </div>
+                <div class="about-image">
+                    <img class="imageClub" src="./images/IMG_3580.JPG" data-parallax="scroll">
+                </div>
+            </div>
+
+            <div class="mv-values-grid">
+                <div class="mv-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Notre Mission</h3>
+                    <p>Créer un environnement sûr et stimulant pour chaque pratiquant de Taekwondo.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Notre Vision</h3>
+                    <p>Être un leader dans la promotion du Taekwondo et inspirer les générations futures.</p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Nos Valeurs</h3>
+                    <ul>
+                        <li><strong>Respect :</strong> Valoriser chaque individu et traiter tout le monde avec dignité.</li>
+                        <li><strong>Discipline :</strong> Atteindre l'excellence par la persévérance.</li>
+                        <li><strong>Excellence :</strong> S'efforcer d'être les meilleurs dans tout ce que nous entreprenons.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Ajoutez cette section après la section vidéo existante -->
+<section id="schedule-info" class="schedule-info-section">
+    <div class="container">
+        <h2>Horaires des Cours</h2>
+        <div class="schedule-info-container">
+            <div class="schedule-card">
+                <i class="fas fa-clock"></i>
+                <h3>Le mardi</h3>
+                <div class="schedule-details">
+                    <h4>Heures</h4>
+                    <p><span class="time">18h à 19h</span> : BABYS et enfants</p>
+                    <p><span class="time">19h à 20h</span> : Adolescents et adultes</p>
+                </div>
+                <div class="schedule-details">
+                    <h4>Adresse</h4>
+                    <p>16 Rue du Progrès, 69100 Villeurbanne</p>
+                </div>
+            </div>
+            <div class="schedule-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Le mercredi</h3>
+                <div class="schedule-details">
+                    <h4>Heures</h4>
+                    <p><span class="time">18h à 19h</span> : BABYS et enfants</p>
+                    <p><span class="time">19h à 20h</span> : Adolescents et adultes</p>
+                </div>
+                <div class="schedule-details">
+                    <h4>Adresse</h4>
+                    <p>6 Rue Berthelot, 69100 Villeurbanne</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Enseignants Section -->
+    <section id="enseignants" class="enseignants-section">
+        <div class="container">
+            <h2>Nos Enseignants</h2>
+            <div class="teachers-grid">
+                <!-- Les enseignants seront chargés dynamiquement ici -->
+            </div>
+        </div>
+    </section>
+    <!-- Témoignages Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>Témoignages</h2>
+            <button class="carousel-button left" id="prevButton">&#10094;</button>
+            <div class="testimonial-carousel">
+                <!-- Les témoignages approuvés seront chargés ici via JavaScript -->
+            </div>
+            <button class="carousel-button right" id="nextButton">&#10095;</button>
+
+            <div class="testimonial-form-trigger">
+                <p>Vous avez une expérience à partager ?</p>
+                <button id="showFormButton" class="btn-submit">Laisser mon avis</button>
+            </div>
+
+            <!-- Modal Structure -->
+            <div id="testimonialModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3>Partagez votre expérience avec nous</h3>
+                    <form id="testimonial-form">
+                        <div class="form-group">
+                            <label for="user-name">Votre nom :</label>
+                            <input type="text" id="user-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-testimonial">Votre témoignage :</label>
+                            <textarea id="user-testimonial" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-photo">Votre photo (optionnelle) :</label>
+                            <input type="file" id="user-photo" accept="image/*">
+                        </div>
+                        <button type="submit" class="btn-submit">Envoyer votre témoignage</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Actualités Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2>Actualités</h2>
+            <div id="featured-news" class="featured-news">
+                <!-- Contenu vedette inséré ici via JavaScript -->
+            </div>
+            <div id="news-grid" class="news-grid">
+                <!-- Les cartes d'actualités seront insérées ici dynamiquement -->
+            </div>
+            <div id="news-buttons" class="news-buttons">
+                <button id="load-more" class="load-more-btn">Charger plus</button>
+                <button id="load-less" class="load-less-btn">Charger moins</button>
+            </div>
+            <div class="news-filter">
+                <button class="filter-btn" data-category="all">Tous</button>
+                <button class="filter-btn" data-category="evenement">Événements</button>
+                <button class="filter-btn" data-category="competition">Compétitions</button>
+                <button class="filter-btn" data-category="annonce">Annonces</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>À propos de nous</h3>
+                <p>L'Olympique Taekwondo Villeurbannais est dédié à l'excellence en Taekwondo. Rejoignez-nous pour découvrir cet art martial et développer vos compétences.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="inscription.html">Inscriptions</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 4 Rue De Bat Yam, 69100 Villeurbanne</p>
+                <p><i class="fas fa-phone-alt"></i> 06.63.97.89.26 / 07.65.82.67.72</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:taekwondovilleurbannais@gmail.com ">taekwondovilleurbannais@gmail.com </a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <a href="https://www.facebook.com/groups/127724277248941/"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Olympique Taekwondo Villeurbannais. Tous droits réservés.</p>
+            <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+        <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const teachersGrid = document.querySelector('.teachers-grid');
+    teachersGrid.innerHTML = localStorage.getItem('teacherSectionHTML') || '';
+});
+    </script>
+     <script type="module" src="js/script.js"></script>
+</body>
+</html>

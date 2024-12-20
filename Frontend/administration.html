@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Administration</title>
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Tableau de Bord - Olympique Taekwondo Villeurbannais</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Tableau de Bord</a></li>
+                <li><a href="#enseignants"><i class="fas fa-chalkboard-teacher"></i> Enseignants</a></li>
+                <li><a href="#temoignages"><i class="fas fa-comment-alt"></i> Témoignages</a></li>
+                <li><a href="#actualites"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="#inscriptions"><i class="fas fa-user-plus"></i> Inscriptions</a></li>
+                <li><a href="#galerie"><i class="fas fa-images"></i> Galerie</a></li>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Accueil du Site</a></li>
+                <li><button id="logout-button"><i class="fas fa-sign-out-alt"></i> Déconnexion</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <h2>Vue d'ensemble</h2>
+        <div class="stats-grid">
+            <div class="stat-card" id="teachers-count">
+                <i class="fas fa-user-tie"></i>
+                <h3>Enseignants</h3>
+                <p><span id="teachers-total">0</span> Enseignants</p>
+            </div>
+            <div class="stat-card" id="inscriptions-count">
+                <i class="fas fa-users"></i>
+                <h3>Inscriptions</h3>
+                <p><span id="inscriptions-pending">0</span> en attente / <span id="inscriptions-approved">0</span> approuvées</p>
+            </div>
+            
+            <div class="stat-card" id="testimonials-count">
+                <i class="fas fa-comments"></i>
+                <h3>Témoignages</h3>
+                <p><span id="testimonials-total">0</span> Témoignages publiés</p>
+            </div>
+            <div class="stat-card" id="payments-count">
+                <i class="fas fa-credit-card"></i>
+                <h3>Paiements</h3>
+                <p><span id="payments-total">0</span> Paiements en attente</p>
+            </div>
+            <div class="stat-card" id="gallery-count">
+                <i class="fas fa-images"></i>
+                <h3>Galerie</h3>
+                <p><span id="gallery-total">0</span> Images</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Gestion des Enseignants -->
+    <section id="enseignants" class="management-section">
+        <h2>Gestion des Enseignants</h2>
+        <button class="btn-add" onclick="openModal('add-teacher-modal', 'add-teacher-form', 'teacher-photo-preview')">Ajouter un Enseignant</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Niveau</th>
+                    <th>Biographie</th>
+                    <th>Photo</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="teachers-list">
+                <!-- Les enseignants seront listés ici dynamiquement -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Modal pour Ajouter/Modifier un Enseignant -->
+    <div id="add-teacher-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('add-teacher-modal')">&times;</span>
+            <h3>Ajouter/Modifier un Enseignant</h3>
+            <form id="add-teacher-form">
+                <div class="form-group">
+                    <label for="teacher-name">Nom de l'enseignant</label>
+                    <input type="text" id="teacher-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacher-level">Niveau</label>
+                    <input type="text" id="teacher-level" required>
+                </div>
+                <div class="form-group">
+                    <label for="teacher-bio">Biographie</label>
+                    <textarea id="teacher-bio" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="teacher-photo">Photo</label>
+                    <input type="file" id="teacher-photo" onchange="previewImage(event, 'teacher-photo-preview')">
+                    <img id="teacher-photo-preview" style="display:none; max-width: 100px;" alt="Prévisualisation de l'image">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-add">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gestion des Témoignages -->
+    <section id="temoignages" class="management-section">
+        <h2>Gestion des Témoignages</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Témoignage</th>
+                    <th>Photo</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="pending-testimonials-list">
+                <!-- Les témoignages seront listés ici dynamiquement -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Gestion des Actualités -->
+    <section id="actualites" class="management-section">
+        <h2>Gestion des Actualités</h2>
+        <button class="btn-add" onclick="openModal('add-news-modal', 'add-news-form', 'news-image-preview')">Ajouter une Actualité</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Contenu</th>
+                    <th>Contenu Supplémentaire</th>
+                    <th>Catégorie</th>
+                    <th>Photo</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="news-list">
+                <!-- Les actualités seront listées ici dynamiquement -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Modal pour Ajouter/Modifier une Actualité -->
+    <div id="add-news-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('add-news-modal')">&times;</span>
+            <h3>Ajouter/Modifier une Actualité</h3>
+            <form id="add-news-form">
+                <div class="form-group">
+                    <label for="news-title">Titre de l'actualité</label>
+                    <input type="text" id="news-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="news-content">Contenu</label>
+                    <textarea id="news-content" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="news-extra-content">Contenu Supplémentaire</label>
+                    <textarea id="news-extra-content"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="news-category">Catégorie</label>
+                    <select id="news-category" required>
+                        <option value="evenement">Événements</option>
+                        <option value="competition">Compétitions</option>
+                        <option value="annonce">Annonces</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="news-image">Image</label>
+                    <input type="file" id="news-image" onchange="previewImage(event, 'news-image-preview')">
+                    <img id="news-image-preview" style="display: none; max-width: 100px;" alt="Prévisualisation de l'image">
+                </div>
+                <div class="form-group">
+                    <label for="news-is-featured">Mettre en avant :</label>
+                    <input type="checkbox" id="news-is-featured">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-add">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gestion des Inscriptions -->
+<section id="inscriptions" class="management-section">
+    <h2>Gestion des Inscriptions</h2>
+    <input type="text" id="search-bar" placeholder="Rechercher une inscription..." oninput="searchRegistrations()">
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Cours</th>
+                <th>Status</th>
+                <th>Document d'identité</th>
+                <th>Certificat Médical</th>
+                <th>Photo d'identité</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="registrations-list">
+            <!-- Les inscriptions seront listées ici dynamiquement -->
+        </tbody>
+    </table>
+    
+</section>
+
+    <!-- Gestion des Paiements -->
+    <section id="paiements" class="management-section">
+        <h2>Gestion des Paiements</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Montant</th>
+                    <th>Méthode</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="payments-list">
+                <!-- Les paiements seront listés ici dynamiquement -->
+            </tbody>
+        </table>
+    </section>
+<!-- Gestion de la Galerie -->
+<section id="galerie" class="management-section">
+    <h2>Gestion de la Galerie</h2>
+    <button class="btn-add" onclick="openModal('add-image-modal', 'add-image-form')">Ajouter une Image</button>
+    <table id="gallery-table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="gallery-list">
+            <!-- Les images seront ajoutées ici dynamiquement -->
+        </tbody>
+    </table>
+</section>
+<!-- Modal pour Ajouter une Image -->
+<div id="add-image-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal('add-image-modal')">&times;</span>
+        <h3>Ajouter une Image à la Galerie</h3>
+        <form id="add-image-form">
+            <div class="form-group">
+                <label for="image-file">Fichier Image</label>
+                <input type="file" id="image-file" required>
+            </div>
+            <div class="form-group">
+                <label for="image-title">Titre de l'image</label>
+                <input type="text" id="image-title" required>
+            </div>
+            <div class="form-group">
+                <label for="image-description">Description de l'image</label>
+                <textarea id="image-description" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-add">Enregistrer</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <!-- Scripts JavaScript -->
+    <script type="text/javascript" src="js/admin-dashboard.js"></script>
+    
+</body>
+</html>

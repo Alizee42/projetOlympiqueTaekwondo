@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscriptions - Olympique Taekwondo Villeurbannais</title>
+        <link rel="stylesheet" href="./css/inscriptions-tarifs.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="./js/connexion.js" defer></script>
+        
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <h1>Olympique Taekwondo Villeurbannais</h1>
+                <div id="hamburger" class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="navbar" id="navbar">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="./index.html">Accueil</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropbtn">Le Club</a>
+                            <ul class="dropdown-content">
+                                <li><a href="./index.html#about">À propos</a></li>
+                                <li><a href="./index.html#enseignants">Enseignants</a></li>
+                                <li><a href="./index.html#testimonials">Témoignages</a></li>
+                                <li><a href="./index.html#news">Actualités</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropbtn">Infos Pratiques</a>
+                            <ul class="dropdown-content">
+                                <li><a href="inscription.html">Inscriptions</a></li>
+                                <li><a href="tarifs.html">Tarifs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="galerie.html">Galerie</a></li>
+                        <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                        <li class="nav-item"><a href="connexion.html">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="connexion" class="connexion-section">
+            <div class="connexion-container">
+                <div class="admin-message">
+                    <p class="intro-message">Cette section est réservée exclusivement aux administrateurs du site de l'Olympique Taekwondo Villeurbannais. Si vous êtes un administrateur, veuillez vous connecter pour accéder à vos outils de gestion.</p>
+                    <p class="info-message">Si vous rencontrez des problèmes de connexion ou avez besoin d'assistance, merci de contacter le support technique à <a href="mailto:support@otv.fr">support@otv.fr</a>.</p>
+                </div>
+                <div class="form-container connexion">
+                    <h2 class="titreConnexion">Connexion</h2>
+                    <form id="login-form" class="connexion-form">
+                        <div class="connexion-field">
+                            <label for="email" class="connexion-label">Adresse Email</label>
+                            <input type="email" id="email" name="email" class="connexion-input" placeholder="Votre adresse email" required>
+                        </div>
+                        <div class="connexion-field">
+                            <label for="password" class="connexion-label">Mot de Passe</label>
+                            <input type="password" id="password" name="password" class="connexion-input" placeholder="Votre mot de passe" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Se connecter</button>
+                        <p class="forgot-password"><a href="#">Mot de passe oublié ?</a></p>
+                    </form>
+                    <p class="signup-link">Pas encore de compte ? <a href="inscription.html">Inscrivez-vous ici</a>.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-about">
+                    <h3>À propos de nous</h3>
+                    <p>L'Olympique Taekwondo Villeurbannais est dédié à l'excellence en Taekwondo. Rejoignez-nous pour découvrir cet art martial et développer vos compétences.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="inscription.html">Inscriptions</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Sport, 69100 Villeurbanne</p>
+                    <p><i class="fas fa-phone-alt"></i> 01 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@otv.fr">contact@otv.fr</a></p>
+                </div>
+                <div class="footer-social">
+                    <h3>Suivez-nous</h3>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Olympique Taekwondo Villeurbannais. Tous droits réservés.</p>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+        </footer>
+    </body>
+</html>

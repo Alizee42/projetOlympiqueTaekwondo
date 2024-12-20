@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs - Olympique Taekwondo Villeurbannais</title>
+    <link rel="stylesheet" href="./css/inscriptions-tarifs.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./js/inscriptionTarif.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/firebase-config.js"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Olympique Taekwondo Villeurbannais</h1>
+            <div id="hamburger" class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html">Accueil</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropbtn">Le Club</a>
+                        <ul class="dropdown-content">
+                            <li><a href="./index.html#about">À propos</a></li>
+                            <li><a href="./index.html#enseignants">Enseignants</a></li>
+                            <li><a href="./index.html#testimonials">Témoignages</a></li>
+                            <li><a href="./index.html#news">Actualités</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropbtn">Infos Pratiques</a>
+                        <ul class="dropdown-content">
+                            <li><a href="inscription.html">Inscriptions</a></li>
+                            <li><a href="tarifs.html">Tarifs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="galerie.html">Galerie</a></li>
+                    <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                    <li class="nav-item"><a href="connexion.html">Connexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="tarifs-section">
+        <div class="containerTarif">
+            <h2>Nos Tarifs</h2>
+
+            <!-- Onglets de Tarifs -->
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'adulte')">Adultes</button>
+                <button class="tab-link" onclick="openTab(event, 'enfant')">Enfants</button>
+                <button class="tab-link" onclick="openTab(event, 'prive')">Cours Privés</button>
+            </div>
+
+            <!-- Contenu des Onglets -->
+            <div id="adulte" class="tab-content active">
+                <h3>Tarifs Adultes</h3>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Durée</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abonnement Mensuel</td>
+                            <td>1 Mois</td>
+                            <td>50€</td>
+                        </tr>
+                        <tr>
+                            <td>Abonnement Trimestriel</td>
+                            <td>3 Mois</td>
+                            <td>140€</td>
+                        </tr>
+                        <tr>
+                            <td>Abonnement Annuel</td>
+                            <td>12 Mois</td>
+                            <td>500€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="enfant" class="tab-content">
+                <h3>Tarifs Enfants</h3>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Durée</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abonnement Mensuel</td>
+                            <td>1 Mois</td>
+                            <td>40€</td>
+                        </tr>
+                        <tr>
+                            <td>Abonnement Trimestriel</td>
+                            <td>3 Mois</td>
+                            <td>110€</td>
+                        </tr>
+                        <tr>
+                            <td>Abonnement Annuel</td>
+                            <td>12 Mois</td>
+                            <td>400€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="prive" class="tab-content">
+                <h3>Tarifs des Cours Privés</h3>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Durée</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Session Unique</td>
+                            <td>1 Heure</td>
+                            <td>60€</td>
+                        </tr>
+                        <tr>
+                            <td>Forfait 5 Sessions</td>
+                            <td>5 Heures</td>
+                            <td>280€</td>
+                        </tr>
+                        <tr>
+                            <td>Forfait 10 Sessions</td>
+                            <td>10 Heures</td>
+                            <td>500€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Options de Paiement -->
+            <div class="payment-options">
+                <h3>Options de Paiement</h3>
+                <p>Vous pouvez régler votre abonnement en ligne en utilisant l'une des méthodes de paiement suivantes :</p>
+                <button class="payment-btn"><i class="fab fa-paypal"></i> Payer avec PayPal</button>
+                <button class="payment-btn"><i class="fas fa-credit-card"></i> Payer par Carte Bancaire</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-item">
+                <h4>Comment puis-je m'inscrire?</h4>
+                <p>Vous pouvez vous inscrire en ligne via notre formulaire d'inscription ou en personne à notre club.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Quels sont les moyens de paiement acceptés?</h4>
+                <p>Nous acceptons PayPal, les cartes bancaires, et les chèques.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Puis-je annuler mon abonnement?</h4>
+                <p>Oui, vous pouvez annuler votre abonnement à tout moment. Veuillez consulter nos conditions d'annulation pour plus de détails.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>À propos de nous</h3>
+                <p>L'Olympique Taekwondo Villeurbannais est dédié à l'excellence en Taekwondo. Rejoignez-nous pour découvrir cet art martial et développer vos compétences.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="inscription.html">Inscriptions</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 4 Rue De Bat Yam, 69100 Villeurbanne</p>
+                <p><i class="fas fa-phone-alt"></i> 06.63.97.89.26 / 07.65.82.67.72</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:taekwondovilleurbannais@gmail.com ">taekwondovilleurbannais@gmail.com </a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Suivez-nous</h3>
+                <a href="https://www.facebook.com/groups/127724277248941/"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Olympique Taekwondo Villeurbannais. Tous droits réservés.</p>
+            <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+        <a href="#top" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+    </footer>
+
+</body>
+</html>
